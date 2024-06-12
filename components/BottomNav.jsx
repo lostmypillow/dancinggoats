@@ -5,36 +5,44 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import InfoIcon from '@mui/icons-material/Info';
-
-import { useRouter } from 'next/navigation'
+import Link from 'next/link';
+import {usePathname} from 'next/navigation'
 
 export default function BottomNav() {
-  const [value, setValue] = useState(0);
-  const router = useRouter();
+
+  const pathname = usePathname()
   return (
     <div className="z-100 fixed w-svw bottom-0 md:hidden ">
+   
       <BottomNavigation
         showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-          router.push(newValue)
-        }}
+        value={pathname}
+       
       >
         <BottomNavigationAction
           label="首頁"
           value={"/"}
+          href='/'
           icon={<HomeIcon />}
+          component={Link}
         />
+
         <BottomNavigationAction
-        label="菜單"
-        value={"menu"}
-        icon={<MenuBookIcon />}
+          label="最新消息"
+          value={"/news"}
+          icon={<InfoIcon />}
+          href='/news'
+          component={Link}
+          />
+          
+          <BottomNavigationAction
+          label="菜單"
+          value={"/menu"}
+          icon={<MenuBookIcon />
+            
+          }  component={Link}
+          href='/menu'
         />
-        <BottomNavigationAction
-        label="關於我們"
-        value={"about"}
-        icon={<InfoIcon />} />
       </BottomNavigation>
     </div>
   );

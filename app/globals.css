@@ -9,4 +9,25 @@
   }
 }
 
+* {
+  border: 2px red;
+}
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 2/1;
+  object-fit: contain;
+}
