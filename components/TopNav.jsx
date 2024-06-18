@@ -61,7 +61,10 @@ export default function TopNav() {
 // className="w-svw py-2 px-6 flex flex-row items-center justify-start gap-4 z-5 fixed top-0 h-18"
   return (
     <>
-      <AppBar position='static' className='flex flex-row items-center justify-center md:justify-start gap-4 px-4 h-[72px]' >
+      <AppBar 
+      position="sticky" 
+    
+      className='flex flex-row items-center justify-center md:justify-start gap-4 px-4 h-[72px]' >
    <img src="/icon.png" className=" h-8 w-8 " />
         <h1 className="flex font-semibold text-lg md:text-xl text-white "> Dancing Goats Coffee </h1>
 
