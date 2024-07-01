@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col md:flex-row items-start justify-center w-full h-full px-4 py-6 gap-4">
+      <main className="flex flex-col md:flex-row items-start justify-center w-svw h-full px-4 py-6 gap-4">
 
         <div className='flex flex-col items-start justify-start gap-4'>
           <img src="/icon.webp" alt="logo" />
@@ -92,7 +92,7 @@ function App() {
             className="fb-page"
             data-href="https://www.facebook.com/profile.php?id=100063938147830"
             data-tabs="timeline"
-            data-width="500"
+            data-width=""
             data-height=""
             data-small-header="true"
             data-adapt-container-width="true"
